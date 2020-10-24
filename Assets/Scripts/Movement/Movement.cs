@@ -1,4 +1,5 @@
 ﻿using Secrets.Core;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,12 @@ namespace Secrets.Movement
         void Update()
         {
             Move();
+            RefreshAnimator();
+        }
+
+        private void RefreshAnimator()
+        {
+            animator.SetFloat("forwardSpeed", currentSpeed);
         }
 
         private void Move()
