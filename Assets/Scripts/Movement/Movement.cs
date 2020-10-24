@@ -46,10 +46,10 @@ namespace Secrets.Movement
             Vector3 moveDirection = (forward * movementInput.y + right * movementInput.x).normalized;
             Vector3 gravityVector = Vector3.zero;
 
-            //if (!controller.isGrounded)
-            //{
-            //    gravityVector -= Physics.gravity;
-            //}
+            if (!controller.isGrounded)
+            {
+                gravityVector += Physics.gravity;
+            }
 
             if (moveDirection != Vector3.zero)
             {
@@ -60,7 +60,7 @@ namespace Secrets.Movement
             currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime);
 
             controller.Move(moveDirection * currentSpeed * Time.deltaTime);
-            //controller.Move(gravityVector * Time.deltaTime);
+            controller.Move(gravityVector * Time.deltaTime);
         }
 
         public void Cancel()
