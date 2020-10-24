@@ -141,7 +141,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 4c2d0f49ac1c12e42aa8888116763db6, type: 2}
+      objectReference: {fileID: 9100000, guid: a22c5f581999d8e4aa051db3c62080f1, type: 2}
+    - target: {fileID: 1840413690234469753, guid: 0e4f6b5a0d136754f8b2c4ef097fd301,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: e74127e5e0d51d946991d3570587265f, type: 3}
     - target: {fileID: 1840413690234469754, guid: 0e4f6b5a0d136754f8b2c4ef097fd301,
         type: 3}
       propertyPath: m_Center.y
